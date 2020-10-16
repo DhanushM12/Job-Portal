@@ -4,6 +4,9 @@ import { Container } from "react-bootstrap";
 import Job from "./Job";
 import Page from "./Page";
 import Search from "./Search";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Login from "./Login";
+import { auth } from "./firebase";
 function App() {
   const [params, setParams] = useState({});
   const [page, setPage] = useState(1);
@@ -17,9 +20,12 @@ function App() {
       return { ...prevParams, [param]: value };
     });
   }
-
+  console.log(auth);
   return (
     <Container className="my-4">
+      <Router>
+        <Route path="/login" component={Login}></Route>
+      </Router>
       <h1 className="mb-4">Welcome to the Job Portal</h1>
       <Search params={params} onParamChange={handleParamChange} />
       <Page page={page} setPage={setPage} hasNextPage={hasNextPage} />
