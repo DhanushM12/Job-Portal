@@ -1,3 +1,34 @@
+## Project Folder Structure
+
+```
+job-portal
+├─ .git
+├─ .gitignore
+├─ package-lock.json
+├─ package.json
+├─ public
+│  ├─ favicon.ico
+│  ├─ index.html
+│  ├─ logo192.png
+│  ├─ logo512.png
+│  ├─ manifest.json
+│  └─ robots.txt
+├─ README.md
+└─ src
+   ├─ App.js
+   ├─ firebase.js
+   ├─ index.js
+   ├─ Job.js
+   ├─ Login.css
+   ├─ Login.js
+   ├─ Page.js
+   ├─ Search.js
+   └─ useFetchJobs.js
+
+```
+
+## React JS
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
