@@ -7,7 +7,7 @@ function App() {
   const [page, setPage] = useState(1);
   const { jobs, loading, error } = useFetchJobs(params, page);
   return (
-    <Container>
+    <Container className="my-4">
       {loading && <h1>Loading Jobs...</h1>}
       {error && <h1>Error, Please Try Refreshing...</h1>}
       {jobs.map((job) => {
