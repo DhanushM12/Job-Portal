@@ -50,9 +50,11 @@ function Header() {
               <span className="header__optionLineTwo">Job Seeker</span>
             </div>
           </Link>
-          <div className="header__option">
-            <span className="header__optionLineTwo">Recruiter</span>
-          </div>
+          <Link to="/recruiter">
+            <div className="header__option">
+              <span className="header__optionLineTwo">Recruiter</span>
+            </div>
+          </Link>
         </div>
       </Router>
     </div>

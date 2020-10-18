@@ -4,20 +4,17 @@ import Form from "react-bootstrap/Form";
 import { Col, InputGroup, Button } from "react-bootstrap";
 import * as yup from "yup";
 import "./Login.css";
-
 const schema = yup.object({
   firstName: yup.string().required(),
   lastName: yup.string().required(),
   email: yup.string().required(),
-  search: yup.string().required(),
-  number: yup.number().required(),
   city: yup.string().required(),
   state: yup.string().required(),
   zip: yup.string().required(),
   file: yup.string().required(),
 });
 
-function JForm() {
+function RForm() {
   return (
     <div className="jobseeker">
       <Formik
@@ -97,22 +94,13 @@ function JForm() {
                   id={`custom-inline-radio-2`}
                 />
               </div>
-              <Form.Group as={Col} md="4" controlId="validationFormik101">
-                <Form.Label>Phone Number</Form.Label>
-                <Form.Control
-                  type="tel"
-                  name="number"
-                  onChange={handleChange}
-                  isValid={touched.number && !errors.number}
-                />
-              </Form.Group>
               <Form.Group as={Col} md="4" controlId="validationFormik102">
                 <Form.Label>Job Search function</Form.Label>
                 <Form.Control
                   type="text"
-                  name="search"
+                  name="lastName"
                   onChange={handleChange}
-                  isValid={touched.search && !errors.search}
+                  isValid={touched.lastName && !errors.lastName}
                 />
               </Form.Group>
             </Form.Row>
@@ -180,4 +168,4 @@ function JForm() {
   );
 }
 
-export default JForm;
+export default RForm;

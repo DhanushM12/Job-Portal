@@ -5,6 +5,7 @@ import Login from "./Login";
 import Header from "./Header";
 import Home from "./Home";
 import JForm from "./JForm";
+import RForm from "./RForm";
 function App() {
   return (
     <Router>
@@ -15,6 +16,10 @@ function App() {
         <Route path="/jobseeker">
           <Header />
           <JForm />
+        </Route>
+        <Route path="/recruiter">
+          <Header />
+          <RForm />
         </Route>
         <Route path="/">
           <Header />
