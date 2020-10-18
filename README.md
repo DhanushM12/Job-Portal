@@ -1,3 +1,9 @@
+## Live Application
+
+```
+https://dm-job-portal.herokuapp.com/
+```
+
 ## Project Folder Structure
 
 ```
@@ -21,10 +27,12 @@ job-portal
    ├─ Header.js
    ├─ Home.js
    ├─ index.js
+   ├─ JForm.js
    ├─ Job.js
    ├─ Login.css
    ├─ Login.js
    ├─ Page.js
+   ├─ RForm.js
    ├─ Search.js
    └─ useFetchJobs.js
 
