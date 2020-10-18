@@ -8,6 +8,9 @@ const schema = yup.object({
   firstName: yup.string().required(),
   lastName: yup.string().required(),
   email: yup.string().required(),
+  search: yup.string().required(),
+  number: yup.number().required(),
+  company: yup.string().required(),
   city: yup.string().required(),
   state: yup.string().required(),
   zip: yup.string().required(),
@@ -45,8 +48,8 @@ function RForm() {
                   isValid={touched.firstName && !errors.firstName}
                 />
                 <Form.Control.Feedback tooltip>
-                  Looks good!, There are 300 recruiters similar to your skills,
-                  would you like to “ review” or “broadcast”
+                  Looks good!, Recommended a “job posting” for better reach,
+                  click to “post a job”
                 </Form.Control.Feedback>
               </Form.Group>
               <Form.Group as={Col} md="4" controlId="validationFormik102">
@@ -78,29 +81,31 @@ function RForm() {
               </Form.Group>
             </Form.Row>
             <Form.Row>
-              <div key={`custom-inline-radio`} className="mb-3">
-                <Form.Check
-                  custom
-                  inline
-                  label="Fresher"
-                  type="radio"
-                  id={`custom-inline-radio-1`}
+              <Form.Group as={Col} md="4" controlId="validationFormik101">
+                <Form.Label>Phone Number</Form.Label>
+                <Form.Control
+                  type="tel"
+                  name="number"
+                  onChange={handleChange}
+                  isValid={touched.number && !errors.number}
                 />
-                <Form.Check
-                  custom
-                  inline
-                  label="Experienced"
-                  type="radio"
-                  id={`custom-inline-radio-2`}
-                />
-              </div>
+              </Form.Group>
               <Form.Group as={Col} md="4" controlId="validationFormik102">
-                <Form.Label>Job Search function</Form.Label>
+                <Form.Label>Company</Form.Label>
                 <Form.Control
                   type="text"
-                  name="lastName"
+                  name="company"
                   onChange={handleChange}
-                  isValid={touched.lastName && !errors.lastName}
+                  isValid={touched.company && !errors.company}
+                />
+              </Form.Group>
+              <Form.Group as={Col} md="4" controlId="validationFormik103">
+                <Form.Label>Preferred functions</Form.Label>
+                <Form.Control
+                  type="text"
+                  name="search"
+                  onChange={handleChange}
+                  isValid={touched.search && !errors.search}
                 />
               </Form.Group>
             </Form.Row>
@@ -146,6 +151,58 @@ function RForm() {
                   {errors.zip}
                 </Form.Control.Feedback>
               </Form.Group>
+            </Form.Row>
+            <Form.Row>
+              <div key={`custom-inline-radio`} className="mb-3">
+                Areas of Hire
+                <Form.Check
+                  custom
+                  inline
+                  label="Fresher"
+                  type="radio"
+                  id={`custom-inline-radio-1`}
+                />
+                <Form.Check
+                  custom
+                  inline
+                  label="Junior to Mid"
+                  type="radio"
+                  id={`custom-inline-radio-2`}
+                />
+                <Form.Check
+                  custom
+                  inline
+                  label="Mid to Senior"
+                  type="radio"
+                  id={`custom-inline-radio-3`}
+                />
+                <Form.Check
+                  custom
+                  inline
+                  label="CXO"
+                  type="radio"
+                  id={`custom-inline-radio-4`}
+                />
+              </div>
+            </Form.Row>
+            <Form.Row>
+              <div key={`custom-inline-radio`} className="mb-3">
+                Blue collar workforce
+                <Form.Check
+                  custom
+                  inline
+                  label="Yes"
+                  type="radio"
+                  id={`custom-inline-radio-5`}
+                />
+                <Form.Check
+                  custom
+                  inline
+                  label="No"
+                  type="radio"
+                  id={`custom-inline-radio-6`}
+                />
+              </div>
             </Form.Row>
             <Form.Group>
               <Form.File
