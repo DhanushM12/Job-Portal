@@ -17,6 +17,9 @@ job-portal
 └─ src
    ├─ App.js
    ├─ firebase.js
+   ├─ Header.css
+   ├─ Header.js
+   ├─ Home.js
    ├─ index.js
    ├─ Job.js
    ├─ Login.css
@@ -24,6 +27,7 @@ job-portal
    ├─ Page.js
    ├─ Search.js
    └─ useFetchJobs.js
+
 
 ```
 
