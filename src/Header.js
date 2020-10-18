@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import "./Header.css";
-import { BrowserRouter as Router, Link, Route } from "react-router-dom";
+import { BrowserRouter as Router, Link } from "react-router-dom";
 import { auth } from "./firebase";
-import Login from "./Login";
 
 function Header() {
   const { user } = useState();
@@ -45,6 +44,14 @@ function Header() {
           <div className="header__option">
             <span className="header__optionLineOne">Expert</span>
             <span className="header__optionLineTwo">Support</span>
+          </div>
+          <Link to="/jobseeker">
+            <div className="header__option">
+              <span className="header__optionLineTwo">Job Seeker</span>
+            </div>
+          </Link>
+          <div className="header__option">
+            <span className="header__optionLineTwo">Recruiter</span>
           </div>
         </div>
       </Router>
